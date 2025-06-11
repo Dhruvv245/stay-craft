@@ -1,13 +1,18 @@
+import Image from "next/image";
+
+import image1 from "@/public/about-1.jpg";
+import image2 from "@/public/about-2.jpg";
+
 export const metadata = {
-    title:'About',
-}
+  title: "About",
+};
 
 export default function Page() {
   return (
     <div className="grid grid-cols-5 gap-x-24 gap-y-32 text-lg items-center">
       <div className="col-span-3">
         <h1 className="text-4xl mb-10 text-accent-400 font-medium">
-          Welcome to The Wild Oasis
+          Welcome to StayCraft
         </h1>
 
         <div className="space-y-8">
@@ -33,14 +38,21 @@ export default function Page() {
       </div>
 
       <div className="col-span-2">
-        <img
-          src="/about-1.jpg"
+        <Image
+          src={image1}
+          placeholder="blur"
+          quality={80}
           alt="Family sitting around a fire pit in front of cabin"
         />
       </div>
 
       <div className="col-span-2">
-        <img src="/about-2.jpg" alt="Family that manages The Wild Oasis" />
+        <Image
+          src={image2}
+          placeholder="blur"
+          quality={80}
+          alt="Family that manages StayCraft"
+        />
       </div>
 
       <div className="col-span-3">
@@ -56,12 +68,11 @@ export default function Page() {
             dedication to creating a warm, welcoming environment.
           </p>
           <p>
-            Over the years, we've maintained the essence of The Wild Oasis,
-            blending the timeless beauty of the mountains with the personal
-            touch only a family business can offer. Here, you're not just a
-            guest; you're part of our extended family. So join us at The Wild
-            Oasis soon, where tradition meets tranquility, and every visit is
-            like coming home.
+            Over the years, we've maintained the essence of StayCraft, blending
+            the timeless beauty of the mountains with the personal touch only a
+            family business can offer. Here, you're not just a guest; you're
+            part of our extended family. So join us at StayCraft soon, where
+            tradition meets tranquility, and every visit is like coming home.
           </p>
 
           <div>
