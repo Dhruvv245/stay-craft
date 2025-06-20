@@ -10,8 +10,8 @@ const josefin = Josefin_Sans({
 
 export const metadata = {
   title: {
-    template: "%s / StayCraft",
-    default: "Welcome / StayCraft",
+    template: "%s | StayCraft",
+    default: "Welcome | StayCraft",
   },
   description:
     "Luxurious cabin hotel, located in the heart of the Italian Dolomites, surrounded by beautiful mountains and dark forests ",
