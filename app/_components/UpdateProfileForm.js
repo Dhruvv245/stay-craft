@@ -1,12 +1,13 @@
 "use client";
 
-export default function UpdataProfileForm({ children }) {
-  const countryFlag = "pt.jpg";
+export default function UpdataProfileForm({ guest,children }) {
+  const {fullName,email,nationalID,nationality,countryFlag} = guest;
   return (
     <form className="bg-primary-900 py-8 px-12 text-lg flex gap-6 flex-col">
       <div className="space-y-2">
         <label>Full name</label>
         <input
+        defaultValue={fullName}
           disabled
           className="px-5 py-3 bg-primary-200 text-primary-800 w-full shadow-sm rounded-sm disabled:cursor-not-allowed disabled:bg-gray-600 disabled:text-gray-400"
         />
@@ -15,6 +16,7 @@ export default function UpdataProfileForm({ children }) {
       <div className="space-y-2">
         <label>Email address</label>
         <input
+        defaultValue={email}
           disabled
           className="px-5 py-3 bg-primary-200 text-primary-800 w-full shadow-sm rounded-sm disabled:cursor-not-allowed disabled:bg-gray-600 disabled:text-gray-400"
         />
@@ -35,6 +37,7 @@ export default function UpdataProfileForm({ children }) {
       <div className="space-y-2">
         <label htmlFor="nationalID">National ID number</label>
         <input
+        defaultValue={nationalID}
           name="nationalID"
           className="px-5 py-3 bg-primary-200 text-primary-800 w-full shadow-sm rounded-sm"
         />
